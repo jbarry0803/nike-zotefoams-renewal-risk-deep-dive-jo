@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(56%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(86%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3EN%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#3b147b">
+<meta name="description" content="Nike × Zotefoams — Renewal Risk Deep-Dive · Joe Barry · April 2026 | deployed with HTMLaunch">
+<link rel="canonical" href="https://jbarry0803.github.io/nike-zotefoams-renewal-risk-deep-dive-jo/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nike × Zotefoams — Renewal Risk Deep-Dive · Joe Barry · April 2026">
+<meta property="og:title" content="Nike × Zotefoams — Renewal Risk Deep-Dive · Joe Barry · April 2026">
+<meta property="og:description" content="Nike × Zotefoams — Renewal Risk Deep-Dive · Joe Barry · April 2026 | deployed with HTMLaunch">
+<meta property="og:url" content="https://jbarry0803.github.io/nike-zotefoams-renewal-risk-deep-dive-jo/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjbarry0803.github.io%2Fnike-zotefoams-renewal-risk-deep-dive-jo%2F?w=1200&h=630">
+<meta property="og:image:alt" content="Nike × Zotefoams — Renewal Risk Deep-Dive · Joe Barry · April 2026">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nike × Zotefoams — Renewal Risk Deep-Dive · Joe Barry · April 2026">
+<meta name="twitter:description" content="Nike × Zotefoams — Renewal Risk Deep-Dive · Joe Barry · April 2026 | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fjbarry0803.github.io%2Fnike-zotefoams-renewal-risk-deep-dive-jo%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="Nike × Zotefoams — Renewal Risk Deep-Dive · Joe Barry · April 2026">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nike × Zotefoams — Renewal Risk Deep-Dive · Joe Barry · April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Oswald:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  font-family: 'Oswald', sans-serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 1.55;
+}
+:root {
+  --bg: #0a1624;
+  --surface: rgba(255,255,255,0.025);
+  --border: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.85);
+  --text-bright: #ffffff;
+  --text-dim: rgba(255,255,255,0.55);
+  --text-faint: rgba(255,255,255,0.35);
+  --gold: #d4a84a;
+  --red: #d45b5b;
+  --green: #5fb98c;
+  --amber: #e9b04a;
+  --nike-orange: #fa5400;
+  --ztf-azure: #5b8def;
+  --neutral: #9ba8b8;
+}
+
+/* --- MASTHEAD --- */
+.masthead {
+  background: linear-gradient(180deg, #0d1c30 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.masthead::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 30%, rgba(250,84,0,0.05), transparent 50%),
+    radial-gradient(circle at 85% 70%, rgba(91,141,239,0.06), transparent 50%);
+}
+.masthead-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 44px 40px 32px;
+  position: relative;
+}
+.classification {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.28em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.masthead h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: -0.8px;
+  margin: 0;
+  line-height: 1.1;
+}
+.masthead h1 .nike { color: var(--nike-orange); }
+.masthead h1 .ztf { color: var(--ztf-azure); }
+.masthead h1 .vs {
+  color: var(--text-dim);
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 8px;
+}
+.masthead .subtitle {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin-top: 14px;
+  font-weight: 300;
+  line-height: 1.65;
+  max-width: 860px;
+}
+.masthead .meta-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  color: var(--text-faint);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+
+/* --- TLDR BANNER (the single biggest element on page) --- */
+.tldr {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  padding: 0 40px;
+}
+.tldr-card {
+  background: linear-gradient(135deg, rgba(95,185,140,0.08), rgba(91,141,239,0.04));
+  border: 1px solid rgba(95,185,140,0.3);
+  border-left: 4px solid var(--green);
+  border-radius: 12px;
+  padding: 26px 32px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: center;
+}
+.tldr-verdict {
+  text-align: center;
+}
+.tldr-verdict-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.tldr-verdict-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.tldr-verdict-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--green);
+  text-transform: uppercase;
+}
+.tldr-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.tldr-body strong { color: var(--text-bright); }
+.tldr-body .key {
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* --- RISK METER --- */
+.meter-wrap {
+  max-width: 1200px;
+  margin: 28px auto 0;
+  padding: 0 40px;
+}
+.meter {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 28px;
+}
+.meter-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.meter-bar {
+  position: relative;
+  height: 12px;
+  background: linear-gradient(90deg, #5fb98c 0%, #d4a84a 45%, #e9b04a 60%, #d45b5b 100%);
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+.meter-indicator {
+  position: absolute;
+  top: -4px;
+  width: 4px;
+  height: 20px;
+  background: var(--text-bright);
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px var(--bg), 0 2px 8px rgba(0,0,0,0.5);
+  left: 22%;
+  transition: left 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.meter-indicator-label {
+  position: absolute;
+  top: -32px;
+  transform: translateX(-50%);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  color: var(--text-bright);
+  background: var(--text-bright);
+  color: var(--bg);
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.meter-indicator-label::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--text-bright);
+}
+.meter-scale {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.15em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+}
+
+/* --- SECTIONS --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+}
+.section {
+  margin-bottom: 44px;
+  scroll-margin-top: 20px;
+}
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: -0.3px;
+  margin: 0 0 14px 0;
+  line-height: 1.2;
+}
+.sub {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.75;
+  margin-bottom: 20px;
+  max-width: 1000px;
+}
+
+/* --- KEY FACTS STRIP --- */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 18px 0 6px;
+}
+.fact {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+.fact-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.fact-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-bright);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+.fact-note {
+  font-size: 10.5px;
+  color: var(--text-dim);
+  line-height: 1.45;
+}
+
+/* --- FORCE TABLE (the core risk decomposition) --- */
+.forces {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+.force {
+  border-radius: 10px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+}
+.force-pro {
+  background: linear-gradient(180deg, rgba(95,185,140,0.08), rgba(95,185,140,0.02));
+  border-left: 3px solid var(--green);
+}
+.force-con {
+  background: linear-gradient(180deg, rgba(212,91,91,0.08), rgba(212,91,91,0.02));
+  border-left: 3px solid var(--red);
+}
+.force-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.force-header-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.force-pro .force-header-label { color: var(--green); }
+.force-con .force-header-label { color: var(--red); }
+.force-weight {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--text-faint);
+  letter-spacing: 0.12em;
+}
+.force h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 6px 0 8px;
+  color: var(--text-bright);
+  line-height: 1.3;
+}
+.force-body {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.force-body strong { color: var(--text-bright); }
+
+/* --- EVIDENCE CARDS --- */
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+.evidence-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.evidence-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--amber);
+}
+.evidence-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.evidence-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+.evidence-body {
+  font-size: 11.5px;
+  line-height: 1.65;
+  color: var(--text-dim);
+}
+.evidence-body strong { color: var(--text); }
+
+/* --- SCENARIO BOX --- */
+.scenarios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 10px;
+}
+.scenario {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  position: relative;
+  overflow: hidden;
+}
+.scenario::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.scenario.base::before { background: var(--green); }
+.scenario.bear::before { background: var(--red); }
+.scenario.bull::before { background: var(--gold); }
+.scenario-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.scenario.base .scenario-label { color: var(--green); }
+.scenario.bear .scenario-label { color: var(--red); }
+.scenario.bull .scenario-label { color: var(--gold); }
+.scenario-prob {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-bright);
+  margin-bottom: 4px;
+}
+.scenario-prob-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: var(--text-faint);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.scenario h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--text-bright);
+  line-height: 1.3;
+}
+.scenario-body {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.scenario-body strong { color: var(--text-bright); }
+.scenario-outcome {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  font-size: 11.5px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* --- COMPETITIVE LANDSCAPE TABLE --- */
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.comp-table th {
+  text-align: left;
+  background: rgba(0,0,0,0.25);
+  padding: 12px 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  border-bottom: 1px solid var(--border);
+}
+.comp-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.comp-table tbody tr:last-child td { border-bottom: none; }
+.comp-table tr.highlight { background: rgba(250,84,0,0.04); }
+.comp-table .brand-logo {
+  display: inline-block;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.pill.green { background: rgba(95,185,140,0.15); color: var(--green); border: 1px solid rgba(95,185,140,0.4); }
+.pill.red { background: rgba(212,91,91,0.15); color: var(--red); border: 1px solid rgba(212,91,91,0.4); }
+.pill.amber { background: rgba(233,176,74,0.15); color: var(--amber); border: 1px solid rgba(233,176,74,0.4); }
+.pill.neutral { background: rgba(155,168,184,0.15); color: var(--neutral); border: 1px solid rgba(155,168,184,0.4); }
+
+/* --- TIMELINE --- */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+  margin-top: 10px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--amber), var(--border));
+}
+.tl-item {
+  position: relative;
+  padding-bottom: 22px;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--amber);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--amber);
+}
+.tl-item.today::before {
+  background: var(--nike-orange);
+  box-shadow: 0 0 0 2px var(--nike-orange), 0 0 12px var(--nike-orange);
+  animation: todayPulse 2.4s ease-in-out infinite;
+}
+@keyframes todayPulse {
+  0%, 100% { box-shadow: 0 0 0 2px var(--nike-orange), 0 0 12px var(--nike-orange); }
+  50%      { box-shadow: 0 0 0 2px var(--nike-orange), 0 0 20px var(--nike-orange); }
+}
+.tl-item.future::before {
+  background: var(--text-faint);
+  box-shadow: 0 0 0 2px var(--text-faint);
+}
+.tl-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--amber);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.tl-item.future .tl-date { color: var(--text-faint); }
+.tl-item.today .tl-date { color: var(--nike-orange); }
+.tl-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.tl-body {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+/* --- FINAL VERDICT --- */
+.verdict-final {
+  background: linear-gradient(135deg, rgba(212,168,74,0.08), rgba(95,185,140,0.04));
+  border: 1px solid rgba(212,168,74,0.3);
+  border-left: 4px solid var(--gold);
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-top: 10px;
+}
+.verdict-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+.verdict-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold);
+}
+.verdict-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+}
+.verdict-body {
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: var(--text);
+}
+.verdict-body strong { color: var(--text-bright); }
+.verdict-body em { color: var(--gold); font-style: normal; }
+
+/* --- NAV STRIP --- */
+.nav-strip {
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+.nav-strip-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+}
+.nav-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-family: 'Oswald', sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  padding: 14px 12px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+.nav-btn:hover { color: var(--text); }
+.nav-btn.active {
+  color: var(--amber);
+  border-bottom-color: var(--amber);
+}
+
+@media (max-width: 900px) {
+  .tldr-card { grid-template-columns: 1fr; gap: 20px; }
+  .forces { grid-template-columns: 1fr; }
+  .evidence-grid { grid-template-columns: 1fr; }
+  .scenarios { grid-template-columns: 1fr; }
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .masthead-inner { padding: 28px 16px; }
+  .masthead h1 { font-size: 28px; }
+  .tldr, .meter-wrap, .container { padding-left: 16px; padding-right: 16px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-inner">
+    <div class="classification">Private · Deep-Dive Memo · Joe Barry · April 2026</div>
+    <h1><span class="nike">Nike</span><span class="vs">×</span><span class="ztf">Zotefoams</span></h1>
+    <div style="font-family:'Playfair Display',serif; font-size:19px; font-style:italic; color:var(--text-dim); margin-top:8px;">Will Nike renew the exclusive supply agreement when it expires 31 December 2029?</div>
+    <div class="subtitle">Zotefoams' £208m valuation currently embeds a ~40% revenue concentration to a single customer whose contract expires in 44 months. This memo evaluates the probability of renewal, non-renewal and restructure scenarios — drawing on supply-chain economics, competing foam technology benchmarks, contract history, Nike's post-2024 strategy, and hard public data.</div>
+    <div class="meta-row">
+      <span>Contract signed Dec 2017</span>
+      <span>Extended Jun 2023 to 31 Dec 2029</span>
+      <span>Nike ~40% of ZTF FY25 revenue</span>
+      <span>Renewal decision window: 2027-2028</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV STRIP -->
+<div class="nav-strip">
+  <div class="nav-strip-inner">
+    <a class="nav-btn" href="#verdict">Verdict</a>
+    <a class="nav-btn" href="#facts">Key Facts</a>
+    <a class="nav-btn" href="#forces">Forces</a>
+    <a class="nav-btn" href="#evidence">Evidence</a>
+    <a class="nav-btn" href="#competing">Competing Foams</a>
+    <a class="nav-btn" href="#scenarios">Scenarios</a>
+    <a class="nav-btn" href="#timeline">Timeline</a>
+    <a class="nav-btn" href="#conclusion">Conclusion</a>
+  </div>
+</div>
+
+<!-- TLDR -->
+<div class="tldr" id="verdict">
+<div class="tldr-card">
+<div class="tldr-verdict">
+  <div class="tldr-verdict-label">Verdict</div>
+  <div class="tldr-verdict-value">~75%</div>
+  <div class="tldr-verdict-sub">Renewal base case</div>
+</div>
+<div class="tldr-body">
+<strong>Nike is highly likely to renew</strong> — but the structure and exclusivity terms may change. The foam technology is so embedded in Nike's elite racing shoe platforms that switching mid-platform is functionally impossible over a 5-year horizon. However the <span class="key">competitive threat from Aliphatic TPU</span> is genuine (A-TPU foams now exceed Pebax on energy return in 2025 lab tests), and Nike's <span class="key">"Win Now" strategy under new CEO Elliott Hill</span> includes supply chain renegotiation. Expected outcome: <strong>renewal on less favourable commercial terms — perhaps tighter exclusivity carve-outs, Nike-side option to source from multiple suppliers for non-Pebax chemistries.</strong> Non-renewal risk is real but tail — estimate 15-20%.
+</div>
+</div>
+</div>
+
+<!-- RISK METER -->
+<div class="meter-wrap">
+<div class="meter">
+<div class="meter-label">Overall Renewal Risk — Zotefoams Equity Perspective</div>
+<div class="meter-bar">
+  <div class="meter-indicator" style="left: 24%;">
+    <div class="meter-indicator-label">LOW-MODERATE</div>
+  </div>
+</div>
+<div class="meter-scale">
+  <span>Negligible</span>
+  <span>Low</span>
+  <span>Moderate</span>
+  <span>High</span>
+  <span>Severe</span>
+</div>
+</div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<!-- SECTION 1: KEY FACTS -->
+<div class="section" id="facts">
+<div class="section-label">§ 1 — Contract Facts</div>
+<h2>What We Know With Certainty</h2>
+<div class="sub">Only a handful of contract terms have ever been disclosed. Zotefoams has explicitly stated it "cannot disclose specific details of the contract due to confidentiality agreements." The knowns:</div>
+<div class="facts">
+  <div class="fact">
+    <div class="fact-label">Original deal signed</div>
+    <div class="fact-value">Dec 2017</div>
+    <div class="fact-note">Announced by Zotefoams; stock up 15% on the day to a then all-time high of 461p</div>
+  </div>
+  <div class="fact">
+    <div class="fact-label">Most recent extension</div>
+    <div class="fact-value">Jun 2023</div>
+    <div class="fact-note">Extended to 31 Dec 2029; "all conditions besides length unchanged"</div>
+  </div>
+  <div class="fact">
+    <div class="fact-label">Exclusivity scope</div>
+    <div class="fact-value">Footwear only</div>
+    <div class="fact-note">"Other than medical footwear" — explicitly carved out by CEO Stirling 2024</div>
+  </div>
+  <div class="fact">
+    <div class="fact-label">Current revenue share</div>
+    <div class="fact-value">~40%</div>
+    <div class="fact-note">FY2025, disclosed on 2025 earnings call by CFO Nick Wright</div>
+  </div>
+  <div class="fact">
+    <div class="fact-label">Nike-specific capex</div>
+    <div class="fact-value">$32m + $10m</div>
+    <div class="fact-note">Vietnam facility with Seoheung JV ($10m for 17.5%); Footwear Innovation Center in Busan, South Korea</div>
+  </div>
+  <div class="fact">
+    <div class="fact-label">Time to contract end</div>
+    <div class="fact-value">44 months</div>
+    <div class="fact-note">From April 2026; decision window in practice is 2027-2028 given platform design cycles</div>
+  </div>
+  <div class="fact">
+    <div class="fact-label">Nike shoe platforms using ZTF</div>
+    <div class="fact-value">6+</div>
+    <div class="fact-note">Alphafly 3, Vaporfly 4, Streakfly 2, Pegasus Premium, Zegama (trail), Ultrafly, GT Cut (basketball)</div>
+  </div>
+  <div class="fact">
+    <div class="fact-label">ZTF product in ZoomX</div>
+    <div class="fact-value">ZOTEK® PEBA</div>
+    <div class="fact-note">Zotefoams processes Arkema's Pebax polymer using proprietary supercritical autoclave; ZoomX is Nike's brand name for the processed foam</div>
+  </div>
+</div>
+</div>
+
+<!-- SECTION 2: FORCES FOR / AGAINST RENEWAL -->
+<div class="section" id="forces">
+<div class="section-label">§ 2 — Forces Driving the Decision</div>
+<h2>The Renewal Calculus — Both Sides</h2>
+<div class="sub">Nike's renewal decision is not a marketing question. It's a supply chain economics question with a design-cycle component. Here are the forces pulling in each direction, weighted by order of magnitude.</div>
+
+<div class="forces">
+
+<div class="force force-pro">
+<div class="force-header">
+  <div class="force-header-label">★★★ Strongest Force For Renewal</div>
+  <div class="force-weight">Weight: Very High</div>
+</div>
+<h3>Embedded Platform Specification</h3>
+<div class="force-body">
+Nike's elite racing shoes (Alphafly 3, Vaporfly 4, Streakfly 2) are <strong>engineered around specific ZOTEK PEBA properties</strong> — cell structure, density, energy return curve, temperature resilience. RunRepeat lab data shows ZoomX becoming only 17% firmer after 20 minutes in a freezer — a key marathon performance attribute. <strong>Switching supplier mid-platform would require complete shoe re-engineering, re-testing, elite athlete re-validation, and retail recertification.</strong> These cycles take 2-3 years. World records (Kiptum Chicago 2023) have been set in ZoomX shoes — the IP validation is effectively permanent.
+</div>
+</div>
+
+<div class="force force-pro">
+<div class="force-header">
+  <div class="force-header-label">★★★ Strong Force For Renewal</div>
+  <div class="force-weight">Weight: High</div>
+</div>
+<h3>November 2025 Strategic Partnership Expansion</h3>
+<div class="force-body">
+In November 2025 Zotefoams announced an <strong>expanded strategic partnership with Nike</strong> — not just an extension of existing supply. This included three joint commitments with multi-year capital expenditure: (1) new <strong>Footwear Innovation Hub in Busan, South Korea</strong>, (2) former <strong>Nike Asia GM Brandon Thomas</strong> appointed as Zotefoams MD for Asia, (3) new <strong>global innovation centre at Croydon</strong> to accelerate product development. Companies planning to terminate in 4 years <em>do not do this.</em>
+</div>
+</div>
+
+<div class="force force-pro">
+<div class="force-header">
+  <div class="force-header-label">★★ Force For Renewal</div>
+  <div class="force-weight">Weight: Medium-High</div>
+</div>
+<h3>Vietnam Manufacturing Joint Venture</h3>
+<div class="force-body">
+Zotefoams' $32m Vietnam plant (commissioning Q4 2026, ramping 2027-28) is positioned specifically to serve Nike's Asian footwear assembly base. <strong>Seoheung's $10m JV stake (17.5%) ties a Korean footwear supply-chain specialist into the asset</strong> — creating a three-way interdependence. The plant is designed around Nike's tonnage requirements. Nike's silence on the commissioning does not mean opposition; it means this is standard contract manufacturing for them.
+</div>
+</div>
+
+<div class="force force-pro">
+<div class="force-header">
+  <div class="force-header-label">★★ Force For Renewal</div>
+  <div class="force-weight">Weight: Medium</div>
+</div>
+<h3>History of Extensions + Expansions</h3>
+<div class="force-body">
+The contract has been extended or expanded multiple times since 2017: (a) 2017 original signing, (b) 2022 extension into trail running (Zegama), (c) 2023 extension into basketball (GT Cut), (d) 2023 extension to Dec 2029, (e) 2023 Ultrafly programme, (f) 2025 strategic partnership expansion. <strong>That's a 9-year track record of deepening commitment, not cooling.</strong> Companies don't repeatedly expand relationships they're planning to exit.
+</div>
+</div>
+
+<!-- AGAINST -->
+
+<div class="force force-con">
+<div class="force-header">
+  <div class="force-header-label">★★ Strongest Force Against Renewal</div>
+  <div class="force-weight">Weight: Medium-High</div>
+</div>
+<h3>A-TPU Technology Overtaking Pebax</h3>
+<div class="force-body">
+The most concrete threat. <strong>As of 2025 lab testing, Aliphatic TPU foams have exceeded Pebax on energy return.</strong> ASICS' new FF Leap (2025), Saucony's PWRRUN HG, PUMA's Nitro Elite and — most importantly — <strong>Adidas' Lightstrike Pro Evo</strong> (used in Adios Pro Evo 2) are all A-TPU or A-TPU variants. RunRepeat: "A-TPU materials are now outperforming Pebax and hitting 80% in our lab test." Nike has no A-TPU capability through Zotefoams. If A-TPU becomes the sport standard, <strong>Nike must either (a) license A-TPU separately, (b) force Zotefoams to develop it, or (c) walk away</strong>.
+</div>
+</div>
+
+<div class="force force-con">
+<div class="force-header">
+  <div class="force-header-label">★★ Force Against Renewal</div>
+  <div class="force-weight">Weight: Medium</div>
+</div>
+<h3>Nike's "Win Now" Strategy + New CEO</h3>
+<div class="force-body">
+Elliott Hill took over as Nike CEO in October 2024 and Matthew Friend (CFO) has explicitly flagged the need to "manage headwinds from repositioning" and "rebalance the portfolio." Nike's FY25 revenues were <strong>down 10% to $46.3bn, with gross margin compressing 14%</strong>. Chief Supply Chain Officer Venkatesh Alagirisamy was promoted to COO in Dec 2025 with a remit that explicitly includes manufacturing renegotiation. <strong>Every supplier contract is being pressure-tested.</strong> Zotefoams is not special in this regard.
+</div>
+</div>
+
+<div class="force force-con">
+<div class="force-header">
+  <div class="force-header-label">★ Force Against Renewal</div>
+  <div class="force-weight">Weight: Low-Medium</div>
+</div>
+<h3>Exclusivity Is Nike's Concession, Not ZTF's</h3>
+<div class="force-body">
+Under the current deal Zotefoams cannot supply ANY other footwear brand (except medical). This is worth billions to Nike competitively — Saucony / PUMA / ASICS all use Pebax but must source from Arkema through different processors. <strong>In renewal negotiations, Nike's most obvious lever is "narrow the exclusivity."</strong> A "footwear cushioning — athletic running only" carve-out would let Nike keep ZTF's top-tier product while allowing ZTF to monetise basketball, trail, tennis supply to others. <strong>Commercial outcome: lower per-unit price to Nike in return for broader ZTF customer base.</strong>
+</div>
+</div>
+
+<div class="force force-con">
+<div class="force-header">
+  <div class="force-header-label">★ Force Against Renewal</div>
+  <div class="force-weight">Weight: Low</div>
+</div>
+<h3>Nike Has In-House Foam Capability</h3>
+<div class="force-body">
+Nike owns <strong>NIKE IHM, Inc.</strong> (Missouri) which manufactures Air-Sole cushioning components in-house. Nike also has an ongoing supply-chain vertical-integration partnership with Apollo Global Management (2016). <strong>Technically, Nike could build its own Pebax processing line</strong> — but supercritical autoclave know-how has been compounding inside Croydon for 100+ years and the capital + time to replicate it is 3-5 years. For a 4-year contract window, building in-house does not beat renewing. For a 10-year window, it might.
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- SECTION 3: HARD EVIDENCE TIMELINE -->
+<div class="section" id="evidence">
+<div class="section-label">§ 3 — Hard Evidence</div>
+<h2>Public Data Points Since 2023</h2>
+<div class="sub">Every item below is traceable to a public announcement, SEC filing, or published lab test. Nothing estimated. This is the evidentiary base for the probability assessment.</div>
+
+<div class="evidence-grid">
+
+<div class="evidence-card">
+<div class="evidence-date">14 Jun 2023</div>
+<div class="evidence-title">Exclusivity extension to 31 Dec 2029</div>
+<div class="evidence-body">Six years before prior term would have expired, Nike signed a full-term extension. "<strong>All conditions besides the agreement's length remain unchanged.</strong>" Extension implies zero pressure on commercial terms at that point. Stock rose 3.7%.</div>
+</div>
+
+<div class="evidence-card">
+<div class="evidence-date">Oct 2023</div>
+<div class="evidence-title">Nike Ultrafly launch (trail racing)</div>
+<div class="evidence-body">Nike's "pinnacle trail racing shoe" — NEW product category for the partnership. Zotefoams pushed into trail after road + track + basketball. <strong>Category expansion signals deepening, not cooling.</strong></div>
+</div>
+
+<div class="evidence-card">
+<div class="evidence-date">Oct 2024</div>
+<div class="evidence-title">Elliott Hill appointed CEO of Nike</div>
+<div class="evidence-body">32-year Nike veteran (previously President Consumer & Marketplace). Retired 2020, unretired to take CEO role after John Donahoe departed. Hill's mandate: restore "sport-first" culture. <strong>ZTF supplies sport-first innovation — strategically aligned with Hill's priorities.</strong></div>
+</div>
+
+<div class="evidence-card">
+<div class="evidence-date">Nov 2025</div>
+<div class="evidence-title">Strategic partnership expansion announced</div>
+<div class="evidence-body">Not just a supply agreement — a multi-site capital commitment including Busan Innovation Hub + Croydon global innovation centre + Vietnam manufacturing. <strong>Brandon Thomas (ex-Nike Asia GM) appointed Zotefoams MD for Asia.</strong> Nike-side executive talent flowing into Zotefoams.</div>
+</div>
+
+<div class="evidence-card">
+<div class="evidence-date">Dec 2025</div>
+<div class="evidence-title">Nike CSCO promoted to COO</div>
+<div class="evidence-body">Venkatesh Alagirisamy took new COO role with expanded remit including "manufacturing" and "operations" — Nike's supply chain is being centralised. All supplier contracts subject to review. <strong>ZTF contract will be pressure-tested in this review.</strong></div>
+</div>
+
+<div class="evidence-card">
+<div class="evidence-date">Mar 2026</div>
+<div class="evidence-title">ZTF FY25 — Nike 40% of revenue</div>
+<div class="evidence-body">CFO Wright disclosed on earnings call: Nike was 40% of group revenue in 2025 (up from 34% in 2021). <strong>Concentration is increasing, not diversifying.</strong> Vietnam capacity will expand this further through 2028.</div>
+</div>
+
+<div class="evidence-card">
+<div class="evidence-date">Q1 2026</div>
+<div class="evidence-title">Footwear volumes "moderating"</div>
+<div class="evidence-body">CEO Cox on Q1 2026 call: "<strong>footwear volumes expected to normalize in 2026 as customer normalizes inventory requirements</strong>." Nike is de-stocking — NOT dis-engaging. Normal post-Olympic cycle pattern.</div>
+</div>
+
+<div class="evidence-card">
+<div class="evidence-date">2025 lab tests</div>
+<div class="evidence-title">A-TPU overtakes Pebax on energy return</div>
+<div class="evidence-body">RunRepeat testing: "<strong>A-TPU materials are now outperforming Pebax and hitting 80% in our lab test.</strong>" Used in ASICS FF Leap, Saucony PWRRUN HG, PUMA Nitro, <strong>Adidas Lightstrike Pro Evo</strong>. ZTF has no A-TPU capability announced.</div>
+</div>
+
+<div class="evidence-card">
+<div class="evidence-date">FY26 (Nike fiscal)</div>
+<div class="evidence-title">Nike revenue down 10% FY25 → FY26</div>
+<div class="evidence-body">Nike FY2025 revenues $46.3bn vs $51.4bn FY24. Gross margin 42.7% vs 44.6%. <strong>CFO Friend: "manage headwinds from repositioning."</strong> Margin pressure creates supply chain renegotiation pressure — but ZTF's supply is tiny % of Nike COGS.</div>
+</div>
+
+</div>
+</div>
+
+<!-- SECTION 4: COMPETITIVE FOAM LANDSCAPE -->
+<div class="section" id="competing">
+<div class="section-label">§ 4 — The Technology Landscape</div>
+<h2>What Nike Could Switch To — And Why It Matters</h2>
+<div class="sub">If Nike wanted to replace ZoomX, what would the alternatives look like? This matrix shows the running-shoe foam universe as of early 2026. The critical insight: <strong>almost every credible alternative requires Nike to build or license an entirely different processing technology.</strong></div>
+
+<table class="comp-table">
+<thead>
+<tr>
+<th style="width:22%;">Foam / Brand</th>
+<th style="width:14%;">Base Chemistry</th>
+<th style="width:13%;">Process</th>
+<th style="width:15%;">Performance</th>
+<th style="width:17%;">Who Could Make It</th>
+<th>Nike Switch Cost</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="highlight">
+<td><span class="brand-logo" style="background:#fa5400;">N</span><strong>Nike ZoomX</strong><br><span style="font-size:10px;color:var(--text-dim);">Alphafly, Vaporfly, Streakfly</span></td>
+<td>Pebax (PEBA)</td>
+<td>Supercritical autoclave (N₂)</td>
+<td><span class="pill green">70-85% ER</span><br><span style="font-size:10px;color:var(--text-dim);">Cold-stable</span></td>
+<td><strong>Zotefoams only</strong></td>
+<td>— current state —</td>
+</tr>
+
+<tr>
+<td><span class="brand-logo" style="background:#000;">A</span><strong>Adidas Lightstrike Pro Evo</strong><br><span style="font-size:10px;color:var(--text-dim);">Adios Pro Evo 2</span></td>
+<td>A-TPU / TPEE</td>
+<td>Supercritical + CNC shape</td>
+<td><span class="pill green">~80% ER</span><br><span style="font-size:10px;color:var(--text-dim);">Lighter than Pebax</span></td>
+<td>BASF + Adidas partnership</td>
+<td><span class="pill red">High</span><br>Complete re-engineering</td>
+</tr>
+
+<tr>
+<td><span class="brand-logo" style="background:#f97316;">A</span><strong>ASICS FF Leap</strong><br><span style="font-size:10px;color:var(--text-dim);">Metaspeed Sky 2025</span></td>
+<td>A-TPU</td>
+<td>Supercritical</td>
+<td><span class="pill green">~78% ER</span></td>
+<td>ASICS proprietary</td>
+<td><span class="pill red">Not available</span><br>Competitor IP</td>
+</tr>
+
+<tr>
+<td><span class="brand-logo" style="background:#ca8a04;">S</span><strong>Saucony PWRRUN PB</strong><br><span style="font-size:10px;color:var(--text-dim);">Endorphin Pro</span></td>
+<td>Pebax (pellet form)</td>
+<td>Bead foaming</td>
+<td><span class="pill amber">70-75% ER</span><br><span style="font-size:10px;color:var(--text-dim);">Softer feel</span></td>
+<td>Arkema supply to Saucony</td>
+<td><span class="pill amber">Medium</span><br>Different form factor</td>
+</tr>
+
+<tr>
+<td><span class="brand-logo" style="background:#0ea5e9;">N</span><strong>Nike Air-Sole</strong><br><span style="font-size:10px;color:var(--text-dim);">all Nike footwear</span></td>
+<td>Urethane (pressurised)</td>
+<td>In-house (NIKE IHM)</td>
+<td><span class="pill amber">Impact only</span><br><span style="font-size:10px;color:var(--text-dim);">Not energy return</span></td>
+<td><strong>Nike in-house</strong></td>
+<td><span class="pill neutral">n/a</span><br>Complement not substitute</td>
+</tr>
+
+<tr>
+<td><span class="brand-logo" style="background:#7c3aed;">B</span><strong>Adidas Boost</strong><br><span style="font-size:10px;color:var(--text-dim);">Ultraboost, SL2</span></td>
+<td>E-TPU (Infinergy)</td>
+<td>Bead foaming (BASF process)</td>
+<td><span class="pill amber">~65% ER</span><br><span style="font-size:10px;color:var(--text-dim);">Heavier</span></td>
+<td>BASF to Adidas exclusive</td>
+<td><span class="pill red">Not available</span><br>Competitor exclusive</td>
+</tr>
+
+<tr>
+<td><span class="brand-logo" style="background:#ef4444;">P</span><strong>PUMA Nitro Elite 2</strong><br><span style="font-size:10px;color:var(--text-dim);">Fast-Foam+ A-TPU</span></td>
+<td>A-TPU</td>
+<td>Supercritical</td>
+<td><span class="pill green">~78% ER</span></td>
+<td>PUMA proprietary</td>
+<td><span class="pill red">Not available</span></td>
+</tr>
+
+<tr>
+<td><span class="brand-logo" style="background:#059669;">B</span><strong>Brooks DNA Gold</strong><br><span style="font-size:10px;color:var(--text-dim);">Hyperion Elite 5</span></td>
+<td>Pebax</td>
+<td>Supercritical (third party)</td>
+<td><span class="pill amber">~72% ER</span></td>
+<td>Third-party Pebax processors</td>
+<td><span class="pill amber">Medium</span><br>Technically inferior to ZoomX</td>
+</tr>
+
+</tbody>
+</table>
+
+<div style="margin-top:14px; padding:14px 18px; background:rgba(250,84,0,0.05); border-left:3px solid var(--nike-orange); border-radius:6px;">
+<strong style="color:var(--nike-orange); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase;">Strategic Read</strong><br>
+<div style="margin-top:6px; font-size:12.5px; line-height:1.75; color:var(--text);">
+The competitive foam landscape has <strong>bifurcated</strong> in 2024-25. ZTF's ZoomX is still <em style="color:var(--amber); font-style:normal;">best-in-class for cold-weather stability and Nike's specific formulation</em>, but A-TPU alternatives from BASF (Adidas), proprietary ASICS/PUMA/Saucony formulations now match or exceed on pure energy return. <strong>Nike's problem is not that ZoomX is bad — it's that the frontier has moved and ZTF's technology moat is narrower than it was in 2018.</strong> This is the single biggest argument for renegotiated rather than extended-as-is renewal.
+</div>
+</div>
+
+</div>
+
+<!-- SECTION 5: SCENARIOS -->
+<div class="section" id="scenarios">
+<div class="section-label">§ 5 — Probability-Weighted Scenarios</div>
+<h2>Three Outcomes — And What Each Means For ZTF Equity</h2>
+<div class="sub">Assigning probability to each outcome and sketching the earnings impact. These probabilities are qualitative judgements based on the evidence above, not point estimates — but they force disciplined thinking about tail risk.</div>
+
+<div class="scenarios">
+
+<div class="scenario base">
+<div class="scenario-label">Base Case</div>
+<div class="scenario-prob">~65%</div>
+<div class="scenario-prob-label">Probability</div>
+<h3>Renewal with Commercial Renegotiation</h3>
+<div class="scenario-body">
+Nike renews for 5-7 years but <strong>narrows exclusivity</strong>: ZTF retains Nike as largest customer but gains rights to supply non-competing footwear categories (tennis, basketball, casual, non-athletic). Nike pays <strong>a slightly lower per-unit price</strong> in exchange. ZTF develops A-TPU capability or Nike accepts Pebax as "sufficient for Nike's specific portfolio." Relationship deepens structurally (Vietnam, Busan commit both sides).
+</div>
+<div class="scenario-outcome">
+<strong>Equity impact:</strong> Slight positive. Nike-specific revenue flat/+5% pa, but new footwear customers add £20-40m over 3 years. Multiple re-rates from 9.5× to ~12×. <strong>5yr CAGR ~16-20%.</strong>
+</div>
+</div>
+
+<div class="scenario bull">
+<div class="scenario-label">Bull Case</div>
+<div class="scenario-prob">~15%</div>
+<div class="scenario-prob-label">Probability</div>
+<h3>Renewal + Deeper Strategic Commitment</h3>
+<div class="scenario-body">
+Nike renews on existing exclusive terms for 10 years, commits to Vietnam capacity plus <strong>jointly fund A-TPU development at Croydon / Busan</strong>. ZTF becomes Nike's outsourced R&D arm for advanced foam, not just a contract manufacturer. Nike takes <strong>equity stake (5-10%)</strong> to align incentives. This is the "Arkema-to-Nike" model — material supplier becomes strategic partner.
+</div>
+<div class="scenario-outcome">
+<strong>Equity impact:</strong> Transformational. Nike-equity announcement alone = +30-50% share price. A-TPU capability worth +£50-100m to ZTF valuation. <strong>5yr CAGR 25-30%.</strong>
+</div>
+</div>
+
+<div class="scenario bear">
+<div class="scenario-label">Bear Case</div>
+<div class="scenario-prob">~20%</div>
+<div class="scenario-prob-label">Probability</div>
+<h3>Non-Renewal or Severe Downsizing</h3>
+<div class="scenario-body">
+Nike decides A-TPU is the future and ZTF has not been able to develop it fast enough. Contract is <strong>not renewed</strong>, OR <strong>renewed only for legacy Pebax categories</strong> (Alphafly, Vaporfly) while new Nike innovation shifts to a new A-TPU supplier. Combined with the Vietnam plant sunk cost this is catastrophic. <strong>~£60m of revenue lost over 2-3 years post-2029.</strong>
+</div>
+<div class="scenario-outcome">
+<strong>Equity impact:</strong> Severe. HPP segment contracts 40-50%. Stock halves to ~200p. Vietnam asset impaired. <strong>5yr CAGR -10 to -15%.</strong> This is the tail that keeps ZTF at 9.5× rather than 14×.
+</div>
+</div>
+
+</div>
+
+<div style="margin-top:18px; background:var(--surface); border-left:3px solid var(--gold); border-radius:6px; padding:14px 20px;">
+<strong style="color:var(--gold); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase;">Probability-Weighted Expected Return</strong><br>
+<div style="margin-top:6px; font-size:12.5px; line-height:1.75; color:var(--text);">
+(0.65 × +18%) + (0.15 × +27%) + (0.20 × −12%) = <strong>+13.4% CAGR</strong> expected. This frames why ZTF at 9.5× EV/EBITDA is an <em style="color:var(--green); font-style:normal;">asymmetric risk-reward</em> — the 20% tail cost is real but the 80% non-tail weighted return more than compensates. For a position sized to handle the tail (1-2% of a portfolio), the expected value is genuinely attractive.
+</div>
+</div>
+
+</div>
+
+<!-- SECTION 6: TIMELINE -->
+<div class="section" id="timeline">
+<div class="section-label">§ 6 — The Decision Window</div>
+<h2>When Does This Actually Get Decided?</h2>
+<div class="sub">The contract expires 31 December 2029. But the <strong>decision window is much earlier</strong> because Nike shoe platforms are designed 24-36 months ahead of launch. The key catalyst dates between now and end-2029:</div>
+
+<div class="timeline">
+
+<div class="tl-item today">
+<div class="tl-date">Apr 2026 · Today</div>
+<div class="tl-title">Starting point — 44 months to contract end</div>
+<div class="tl-body">ZTF trades at 426p / £208m MC / 9.5× EV/EBITDA. Market pricing ~10-15% probability of non-renewal based on multiple compression vs quality peer benchmarks (Croda 14×, Victrex 12×).</div>
+</div>
+
+<div class="tl-item">
+<div class="tl-date">H2 2026</div>
+<div class="tl-title">Vietnam plant commissioning begins</div>
+<div class="tl-body">Q4 2026 initial commissioning per ZTF guidance. If Nike is committed, expect early volume orders aligned to 2028-29 shoe releases. Silence or delays here would be the first public red flag.</div>
+</div>
+
+<div class="tl-item">
+<div class="tl-date">FY 2027 (May 2026 - May 2027)</div>
+<div class="tl-title">Nike's next "Innovation Series" drop</div>
+<div class="tl-body">Nike typically announces major platform technology refreshes (Vaporfly 5, Alphafly 4) in 18-24 month cycles. The next flagship launch will reveal whether Nike is still investing in ZoomX/Pebax for its top tier.</div>
+</div>
+
+<div class="tl-item">
+<div class="tl-date">2027</div>
+<div class="tl-title">Earliest realistic renewal signal</div>
+<div class="tl-body">Contract negotiations for 2030+ would typically start 30 months before expiry to align with 2029 shoe platform design freeze. <strong>This is when we'd expect the first RNS announcement of extension or termination intent.</strong></div>
+</div>
+
+<div class="tl-item future">
+<div class="tl-date">2028</div>
+<div class="tl-title">LA 2028 Olympics</div>
+<div class="tl-body">Nike's most important marketing window of the decade. ZoomX shoes in elite marathons at LA would be worth multiple of their revenue in brand value to Nike. Strong behavioural incentive to keep ZTF supply locked for 2028 events.</div>
+</div>
+
+<div class="tl-item future">
+<div class="tl-date">H1 2029</div>
+<div class="tl-title">Latest realistic renewal announcement</div>
+<div class="tl-body">By mid-2029 Nike must have contracted with its 2030+ foam supplier (whoever that is) to lock in 2030 shoe design cycle. If ZTF hasn't received renewal notice by this point, tail scenario becomes real.</div>
+</div>
+
+<div class="tl-item future">
+<div class="tl-date">31 Dec 2029</div>
+<div class="tl-title">Contract expiry</div>
+<div class="tl-body">By this date the question will long since have been resolved. But the public will know the answer 18-24 months earlier — in 2027-28 — through shoe platform hints, capex announcements, and ultimately a formal RNS.</div>
+</div>
+
+</div>
+</div>
+
+<!-- SECTION 7: FINAL VERDICT -->
+<div class="section" id="conclusion">
+<div class="section-label">§ 7 — Conclusion</div>
+<h2>The Honest Probabilistic Answer</h2>
+
+<div class="verdict-final">
+<div class="verdict-header">
+  <div class="verdict-title">What to actually believe</div>
+  <div class="verdict-tag">Joe's Answer</div>
+</div>
+<div class="verdict-body">
+<p>Nike is <em>very likely</em> to renew — but probably not on the current terms. <strong>Base case ~65% is renewal with narrower exclusivity.</strong> The evidence base for this is strong: the November 2025 strategic partnership expansion was a multi-site capital commitment with joint talent transfer that makes no sense if Nike is planning to exit in 44 months. The Busan Innovation Hub and the Vietnam plant are 10-year assets, not 4-year bridges.</p>
+
+<p>The <em>real risk</em> is not termination — it's commercial renegotiation. <strong>A-TPU has overtaken Pebax on energy return in 2025 lab tests</strong>, and Nike's new CEO and new COO are both focused on supply chain optimization. The likely 2028-2029 announcement will be "renewal on modified terms" — Nike takes lower pricing or carves out exclusivity in exchange for continued volume commitment.</p>
+
+<p>The <em>tail</em> matters though. <strong>20% non-renewal probability is not nothing.</strong> It's the reason ZTF trades at 9.5× EV/EBITDA rather than the 13-14× multiple its ROCE, margin trajectory and moat would otherwise command. If you can stomach the tail, you're being paid to hold it — the probability-weighted expected return is ~13% CAGR at current prices, which beats a risk-free alternative handily.</p>
+
+<p><strong>Watch for three early warning signs between now and 2027:</strong></p>
+<p style="margin-left:20px; border-left:2px solid var(--amber); padding-left:16px;">
+① <strong>Delay in Vietnam commissioning beyond Q4 2026</strong> — would suggest Nike has slowed tonnage planning.<br>
+② <strong>Nike launches a major shoe platform using non-ZoomX foam</strong> — watch Vaporfly 5 closely.<br>
+③ <strong>No renewal announcement by end-2028</strong> — would put ZTF firmly in bear scenario pricing.
+</p>
+
+<p style="margin-top:20px;">If none of those three trigger by late 2028, you can treat the renewal risk as effectively resolved. Until then, <strong>size positions assuming the 20% tail is real</strong> and collect the compounding if it doesn't trigger.</p>
+
+</div>
+</div>
+
+<div style="margin-top:20px; padding:14px 18px; background:var(--surface); border-radius:6px; border-left:3px solid var(--ztf-azure); font-size:12px; line-height:1.75; color:var(--text-dim);">
+<strong style="color:var(--ztf-azure);">One final thought —</strong> the risk framework above is what a careful analyst uses. What a <em>cynical</em> analyst would note is that Zotefoams' 2029 contract was extended in June 2023, 78 months before expiry. If that pattern holds, the next extension announcement will come sometime between Q3 2026 and Q2 2027. <strong>We should have an answer on renewal risk within 12-18 months — not 4 years.</strong> Watch the RNS feed.
+</div>
+
+</div>
+
+<!-- SOURCES -->
+<div class="section">
+<div class="section-label">§ 8 — Sources</div>
+<h2>Every Data Point Is Traceable</h2>
+<table class="comp-table">
+<thead><tr><th>Source</th><th>What it provides</th></tr></thead>
+<tbody>
+<tr><td><strong>Zotefoams 14 Jun 2023 RNS</strong> — "extends Nike exclusivity deal to end of 2029"</td><td>Contract extension announcement, "all conditions besides length unchanged", original Dec 2017 signing reference.</td></tr>
+<tr><td><strong>Zotefoams 6 Nov 2025 RNS</strong> — "Announces Strategic Partnership with Nike"</td><td>Brandon Thomas (ex-Nike Asia GM) appointment as ZTF MD Asia, Footwear Innovation Hub Busan, Croydon global innovation centre, Vietnam plant Q4 2026 commissioning.</td></tr>
+<tr><td><strong>Zotefoams FY2025 prelim results + earnings call</strong> — 17 Mar 2026</td><td>Nike ~40% of FY25 revenue (CFO Wright), footwear "normalising" in 2026, medium-term margin path to >18%, ~£22.8m op profit.</td></tr>
+<tr><td><strong>Nike Q4 FY2025 + Q1 FY2026 earnings 8-Ks</strong> — SEC filings</td><td>FY25 revenue $46.3bn (-10%), gross margin compression, Elliott Hill "Win Now" strategy, Venkatesh Alagirisamy COO promotion Dec 2025.</td></tr>
+<tr><td><strong>RunRepeat "Ultimate Guide to Running Shoe Foams"</strong> — Oct 2025 update</td><td>A-TPU vs Pebax energy return testing; "A-TPU materials are now outperforming Pebax and hitting 80% in our lab test"; foam chemistry breakdown by brand.</td></tr>
+<tr><td><strong>RunRepeat Alphafly 3 + Pegasus Premium reviews</strong></td><td>Confirmed: "ZoomX is made from Pebax by Zotefoams (ZOTEK® PEBA)" — direct chemistry attribution + lab testing.</td></tr>
+<tr><td><strong>Nike 10-K FY2007</strong> — SEC filing</td><td>NIKE IHM, Inc. (Missouri) wholly-owned subsidiary manufactures Air-Sole cushioning in-house — evidence of Nike internal cushioning capability (but not Pebax).</td></tr>
+<tr><td><strong>Nike-Apollo strategic partnership</strong> — August 2016 Business Wire release</td><td>Nike's vertical integration strategy through Apollo-managed supply chain JV. Context for Nike supplier-relationship philosophy.</td></tr>
+<tr><td><strong>Road Trail Run — Adidas Hyperboost Edge review</strong> — Mar 2026</td><td>Competitive foam benchmarking; Lightstrike Pro Evo vs Pebax vs Boost Light; CNC-shaped midsole manufacturing process.</td></tr>
+</tbody>
+</table>
+
+<p style="margin-top:20px;font-size:10.5px;color:var(--text-faint); font-family:'IBM Plex Mono',monospace; line-height:1.7;">Prepared by Joe Barry · April 2026 · LSE final year. Deep-dive memo companion to Zotefoams standalone pitch deck. Probability estimates are qualitative judgements, not quantitative model outputs. All technology performance data from public lab tests (RunRepeat); all financial data from Zotefoams + Nike filings. Not for distribution.</p>
+</div>
+
+</div>
+
+<script>
+// Simple scroll-spy for nav
+(function(){
+  var navBtns = document.querySelectorAll('.nav-btn');
+  var sections = ['verdict','facts','forces','evidence','competing','scenarios','timeline','conclusion'];
+  function onScroll(){
+    var y = window.scrollY + 120;
+    var active = 'verdict';
+    sections.forEach(function(id){
+      var el = document.getElementById(id);
+      if (el && el.offsetTop <= y) active = id;
+    });
+    navBtns.forEach(function(b){
+      var href = b.getAttribute('href');
+      b.classList.toggle('active', href === '#' + active);
+    });
+  }
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // Smooth scroll on nav click
+  navBtns.forEach(function(b){
+    b.addEventListener('click', function(e){
+      e.preventDefault();
+      var id = b.getAttribute('href').slice(1);
+      var el = document.getElementById(id);
+      if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+    });
+  });
+
+  // Animate the risk meter on load
+  setTimeout(function(){
+    var ind = document.querySelector('.meter-indicator');
+    if (ind) {
+      ind.style.left = '0%';
+      setTimeout(function(){ ind.style.left = '24%'; }, 50);
+    }
+  }, 300);
+})();
+</script>
+
+</body>
+</html>
